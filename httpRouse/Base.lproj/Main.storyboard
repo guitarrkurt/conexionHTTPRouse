@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="httpRouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="anonymous" borderStyle="roundedRect" placeholder="User" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pvM-X2-ucg">
+                                <rect key="frame" x="252" y="118" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="M6b-9b-lF4"/>
+                                    <constraint firstAttribute="height" constant="30" id="g3V-Hv-jkM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="/123" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r99-CE-lWS">
+                                <rect key="frame" x="252" y="193" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ej0-nD-1uZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YwJ-zR-SBi">
+                                <rect key="frame" x="265" y="282" width="70" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="GnF-Vz-I0b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Enviar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C5Q-hg-4nm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r99-CE-lWS" firstAttribute="leading" secondItem="pvM-X2-ucg" secondAttribute="leading" id="23a-gI-PSJ"/>
+                            <constraint firstItem="r99-CE-lWS" firstAttribute="top" secondItem="pvM-X2-ucg" secondAttribute="bottom" constant="45" id="6Om-dq-yI8"/>
+                            <constraint firstItem="YwJ-zR-SBi" firstAttribute="centerX" secondItem="r99-CE-lWS" secondAttribute="centerX" id="Zkg-Mr-xU9"/>
+                            <constraint firstItem="YwJ-zR-SBi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ccV-3K-Qbg"/>
+                            <constraint firstItem="YwJ-zR-SBi" firstAttribute="top" secondItem="r99-CE-lWS" secondAttribute="bottom" constant="59" id="dZX-q5-5HS"/>
+                            <constraint firstItem="pvM-X2-ucg" firstAttribute="trailing" secondItem="r99-CE-lWS" secondAttribute="trailing" id="e80-BC-MZd"/>
+                            <constraint firstItem="pvM-X2-ucg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="98" id="hBX-xO-iKv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YwJ-zR-SBi" secondAttribute="bottom" constant="283" id="qfT-Jh-nt9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HaO-w1-B3k"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="r99-CE-lWS" id="bGf-tv-eTC"/>
+                        <outlet property="userTextField" destination="pvM-X2-ucg" id="8XK-bT-XM2"/>
+                        <segue destination="gXX-EG-JAa" kind="show" identifier="secondViewController" id="HST-5O-cdl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1143" y="-431"/>
+        </scene>
+        <!--Picker View Controller-->
+        <scene sceneID="mLs-3n-yJT">
+            <objects>
+                <viewController id="DiQ-Rh-l46" customClass="PickerViewController" customModule="httpRouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XU1-kJ-sgm"/>
+                        <viewControllerLayoutGuide type="bottom" id="qPd-So-TlP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z7U-Ut-E42">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3SL-LG-EzV">
+                                <rect key="frame" x="234" y="369" width="133" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="Wpb-8r-dND"/>
+                                    <constraint firstAttribute="height" constant="60" id="khf-cX-Rah"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Votar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="votar:" destination="DiQ-Rh-l46" eventType="touchUpInside" id="MGz-lN-6Gf"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oiy-C1-HEV">
+                                <rect key="frame" x="0.0" y="199" width="600" height="162"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3SL-LG-EzV" firstAttribute="centerX" secondItem="oiy-C1-HEV" secondAttribute="centerX" id="4VD-70-aCu"/>
+                            <constraint firstItem="oiy-C1-HEV" firstAttribute="top" secondItem="XU1-kJ-sgm" secondAttribute="bottom" constant="135" id="6xP-id-fou"/>
+                            <constraint firstAttribute="trailing" secondItem="oiy-C1-HEV" secondAttribute="trailing" id="Mko-kg-ykj"/>
+                            <constraint firstItem="oiy-C1-HEV" firstAttribute="leading" secondItem="z7U-Ut-E42" secondAttribute="leading" id="abS-Y0-NRy"/>
+                            <constraint firstItem="3SL-LG-EzV" firstAttribute="top" secondItem="oiy-C1-HEV" secondAttribute="bottom" constant="8" symbolic="YES" id="xp3-k0-fYX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2dM-bW-W0t"/>
+                    <connections>
+                        <outlet property="picker" destination="oiy-C1-HEV" id="ugl-9X-Tc5"/>
+                        <segue destination="1IQ-wh-4mJ" kind="show" id="vF1-iM-Heh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wRh-Xr-sNR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2535" y="-358"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="PcA-Ij-5Jb">
+            <objects>
+                <viewController id="1IQ-wh-4mJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YQK-Lt-Vbd"/>
+                        <viewControllerLayoutGuide type="bottom" id="luz-rL-Eah"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YSr-bP-qje">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="srD-TA-b57" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3241" y="-358"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LYB-Hh-8TM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gXX-EG-JAa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="T8d-JB-hHX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DiQ-Rh-l46" kind="relationship" relationship="rootViewController" id="8l2-ub-EKL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rJT-an-oS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1839" y="-358"/>
+        </scene>
+    </scenes>
+</document>
